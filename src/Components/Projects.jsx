@@ -4,10 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 const Project = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
-      githubLink: 'https://github.com/yourusername/ecommerce-platform',
-      websiteLink: 'https://ecommerce-demo.com',
+      title: 'Pokémon Data Analytics Pipeline',
+      description: 'Developed an end-to-end cloud data pipeline to ingest, process, and analyze Pokémon data using Airflow, Azure, Databricks, and Power BI. Implemented Medallion architecture for structured storage, automated workflows, and built interactive dashboards to explore attributes like type, stats, and performance, enabling efficient analytics and improved query performance.',
+      githubLink: 'https://github.com/adwickakarsh/project-pikachu',
     },
     {
       title: 'Task Management App',
@@ -29,7 +28,7 @@ const Project = () => {
 
   return (
     <section className="min-h-screen py-20 px-10 bg-blue-200">
-      <h2 className="text-6xl font-bold mb-16 text-center">My Projects</h2>
+      <h2 className="text-7xl font-bold mb-16 tracking-tight text-center">My Projects</h2>
       
       <div className="max-w-4xl mx-auto space-y-8">
         {projects.map((project, index) => (
