@@ -1,12 +1,98 @@
-import React from 'react'
+import { ArrowUpRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
-const Projects = () => {
+const Project = () => {
+  const projects = [
+    {
+      title: 'E-Commerce Platform',
+      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
+      githubLink: 'https://github.com/yourusername/ecommerce-platform',
+      websiteLink: 'https://ecommerce-demo.com',
+    },
+    {
+      title: 'Task Management App',
+      description: 'A collaborative task management application with real-time updates using Socket.io. Users can create projects, assign tasks, and track progress with an intuitive dashboard.',
+      githubLink: 'https://github.com/yourusername/task-manager',
+    },
+    {
+      title: 'Weather Dashboard',
+      description: 'A weather forecasting dashboard that displays current weather and 7-day forecasts using OpenWeatherMap API. Built with React and features beautiful data visualizations.',
+      githubLink: 'https://github.com/yourusername/weather-dashboard',
+      websiteLink: 'https://weather-demo.com',
+    },
+    {
+      title: 'Social Media Clone',
+      description: 'A Twitter-like social media platform with user profiles, posts, likes, comments, and follow functionality. Built using React, Express, and PostgreSQL.',
+      githubLink: 'https://github.com/yourusername/social-clone',
+    },
+  ];
+
   return (
-    <div className='h-screen bg-blue-200 flex flex-col gap-5 items-center justify-center text-5xl text-gray-600 tracking-widest max-sm:text-4xl'>
-      <div className='flex justify-center items-center'>Projects</div>
-      <div className='flex justify-center items-center '>Coming Soon</div>
-    </div>
-  )
-}
+    <section className="min-h-screen py-20 px-10 bg-blue-200">
+      <h2 className="text-6xl font-bold mb-16 text-center">My Projects</h2>
+      
+      <div className="max-w-4xl mx-auto space-y-8">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} index={index} />
+        ))}
+      </div>
+    </section>
+  );
+};
 
-export default Projects
+const ProjectCard = ({ project, index }) => {
+  const [show, setShow] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setShow(true),
+      { threshold: 0.2 }
+    );
+    
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`sticky transition-all duration-700 ${show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+      style={{
+        top: `${80 + index * 20}px`,
+        transitionDelay: `${index * 150}ms`,
+      }}
+    >
+      <div className="bg-white border-2 border-black rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all">
+        <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
+        <p className="text-gray-700 mb-6 text-lg">{project.description}</p>
+        
+        <div className="flex gap-4 items-center">
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 p-3 bg-black text-white rounded-lg hover:bg-purple-600 hover:scale-110 transition-all"
+          >
+            <ArrowUpRight size={20} />
+            GitHub
+          </a>
+          
+          {project.websiteLink && (
+            <a
+              href={project.websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 p-3 bg-black text-white rounded-lg hover:bg-blue-700 hover:scale-110 transition-all"
+            >
+              <ArrowUpRight size={20} />
+              Website
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Project;
