@@ -3,7 +3,7 @@ import {Link} from 'react-router'
 
 const Connect = () => {
   return (
-    <div className='p-12 flex items-center justify-around text-xl bg-blue-100'>
+    <div className='p-12 flex items-center justify-around text-xl bg-blue-100 max-sm:p-3'>
         <div className='text-4xl tracking-wide'>Let's work Together</div>
         <div className='flex gap-10 max-md:flex-col'>
           <button className='bg-black text-blue-50 p-4 transition-all duration-400 rounded-xl hover:scale-120 hover:bg-blue-600 max-lg:scale-90'>
