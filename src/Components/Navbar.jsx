@@ -30,14 +30,14 @@ const Navbar = () => {
           isOpen ? 'translate-y-0' : '-translate-y-full'
         }`}>
         <div className="w-screen flex items-center justify-center h-screen text-black">
-          <nav className="flex items-center gap-10 text-2xl">
+          <nav className="flex items-center gap-7 text-2xl">
             <a target='_blank' href="https://github.com/adwickakarsh" className="transition-all rounded-xl duration-500 ease-out bg-black p-7 text-blue-300 hover:text-blue-100 hover:scale-125 hover:bg-blue-600" onClick={toggleMenu}>
-              <Github size={50} strokeWidth={1.3}/>
+              <Github size={48} strokeWidth={1.3}/>
             </a>
             <a href="https://linkedin.com/in/adwickakarsh" target='_blank' className="transition-all rounded-xl duration-500 ease-out bg-black p-7 text-blue-300 hover:text-blue-100 hover:scale-125 hover:bg-blue-600" onClick={toggleMenu}>
-              <Linkedin size={50} strokeWidth={1.3} />
+              <Linkedin size={48} strokeWidth={1.3} />
             </a>
-            <a href="mailto:adwick0704@gmail.com" target='_blank' className="transition-all rounded-xl duration-500 ease-out bg-black p-7 text-blue-300 hover:text-blue-100 hover:scale-125 hover:bg-blue-600" onClick={toggleMenu}><Mail size={50} strokeWidth={1.3} /></a>
+            <a href="mailto:adwick0704@gmail.com" target='_blank' className="transition-all rounded-xl duration-500 ease-out bg-black p-7 text-blue-300 hover:text-blue-100 hover:scale-125 hover:bg-blue-600" onClick={toggleMenu}><Mail size={48} strokeWidth={1.3} /></a>
           </nav>
         </div>
       </div>
