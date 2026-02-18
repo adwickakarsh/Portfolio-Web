@@ -5,6 +5,7 @@ import Footer from './Components/Footer'
 import Projects from './Components/Projects'
 import Lenis from 'lenis'
 import Connect from './Components/Connect'
+import Preloader from './Components/Preloader'
 
 const App = () => {
   const lenis = new Lenis({
@@ -13,6 +14,7 @@ const App = () => {
   })
   return (
     <div>
+      <Preloader/>
       <Navbar/>
       <Hero/>
       <Projects/>
