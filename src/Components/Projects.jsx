@@ -5,7 +5,7 @@ const Project = () => {
   const projects = [
     {
       title: 'Pokémon Data Analytics Pipeline',
-      description: 'Developed an end-to-end cloud data pipeline to ingest, process, and analyze Pokémon data using Airflow, Azure, Databricks, and Power BI. Implemented Medallion architecture for structured storage, automated workflows, and built interactive dashboards to explore attributes like type, stats, and performance, enabling efficient analytics and improved query performance.',
+      description: 'Developed an end-to-end cloud data pipeline to ingest, process, and analyze Pokémon data using Airflow, Azure, Databricks, and Power BI. Implemented Medallion architecture for structured storage, automated workflows, and built interactive dashboards to explore attributes.',
       githubLink: 'https://github.com/adwickakarsh/project-pikachu',
     },
     {
