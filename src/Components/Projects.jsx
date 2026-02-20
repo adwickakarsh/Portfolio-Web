@@ -16,8 +16,8 @@ const Project = () => {
     {
       title: 'Weather Dashboard',
       description: 'A weather forecasting dashboard that displays current weather and 7-day forecasts using OpenWeatherMap API. Built with React and features beautiful data visualizations.',
-      githubLink: 'https://github.com/yourusername/weather-dashboard',
-      websiteLink: 'https://weather-demo.com',
+      githubLink: 'https://github.com/adwickakarsh/Weather-App',
+      websiteLink: 'https://weather-dekho-adwick.vercel.app/',
     },
     {
       title: 'Social Media Clone',
