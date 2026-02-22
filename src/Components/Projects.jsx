@@ -4,26 +4,20 @@ import { useEffect, useRef, useState } from 'react';
 const Project = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
-      githubLink: 'https://github.com/yourusername/ecommerce-platform',
-      websiteLink: 'https://ecommerce-demo.com',
+      title: 'Pokémon Data Analytics Pipeline',
+      description: 'Built an end-to-end cloud data pipeline using Airflow, Azure, and Databricks to ingest, transform, and analyze Pokémon data, delivering interactive Power BI dashboards with real-time filtering and performance-optimized analytics.',
+      githubLink: 'https://github.com/adwickakarsh/project-pikachu',
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates using Socket.io. Users can create projects, assign tasks, and track progress with an intuitive dashboard.',
-      githubLink: 'https://github.com/yourusername/task-manager',
+      title: 'Weather Dekho',
+      description: 'A weather forecasting dashboard that displays current weather using OpenMeteo API. Built with React and features beautiful data visualizations.',
+      githubLink: 'https://github.com/adwickakarsh/Weather-App',
+      websiteLink: 'https://weather-dekho-adwick.vercel.app',
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A weather forecasting dashboard that displays current weather and 7-day forecasts using OpenWeatherMap API. Built with React and features beautiful data visualizations.',
-      githubLink: 'https://github.com/yourusername/weather-dashboard',
-      websiteLink: 'https://weather-demo.com',
-    },
-    {
-      title: 'Social Media Clone',
-      description: 'A Twitter-like social media platform with user profiles, posts, likes, comments, and follow functionality. Built using React, Express, and PostgreSQL.',
-      githubLink: 'https://github.com/yourusername/social-clone',
+      title: 'AdventureWorks Azure Data Pipeline',
+      description: 'Designed a scalable ELT pipeline on Azure using Data Factory, Databricks, and Synapse to process AdventureWorks data, enabling sales and customer insights through optimized transformations and Power BI visualizations.',
+      githubLink: 'https://github.com/adwickakarsh/azureproject',
     },
   ];
 

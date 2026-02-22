@@ -4,27 +4,39 @@ const TechnicalSkills = () => {
   const skills = [
     {
       category: 'Frontend',
-      items: ['React', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Tailwind CSS', 'Next.js', 'Redux'],
+      items: ['React', 'JavaScript', 'HTML/CSS', 'Tailwind CSS', 'Routing'],
     },
     {
-      category: 'Backend',
-      items: ['Node.js', 'Express', 'Python', 'Django', 'REST APIs', 'GraphQL'],
+      category: 'Programming',
+      items: ['Python', 'SQL', 'Java', 'Shell Scripting'],
     },
     {
-      category: 'Database',
-      items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Firebase'],
+      category: 'Data Analysis & Libraries',
+      items: ['Pandas', 'NumPy', 'PySpark', 'Data Cleaning', 'EDA', 'Data Modeling'],
     },
     {
-      category: 'Tools & Others',
-      items: ['Git', 'Docker', 'AWS', 'Figma', 'Webpack', 'Jest', 'CI/CD'],
-    }
+      category: 'Visualization',
+      items: ['Power BI', 'Matplotlib', 'Seaborn'],
+    },
+    {
+      category: 'Cloud & Data Engineering',
+      items: ['Azure Data Factory', 'Databricks', 'Azure Synapse', 'Azure Data Lake'],
+    },
+    {
+      category: 'Databases',
+      items: ['SQL Server', 'PostgreSQL', 'MongoDB'],
+    },
+    {
+      category: 'Tools & Platforms',
+      items: ['Git', 'GitHub', 'Linux'],
+    },
   ];
 
   return (
-    <section className=" py-20 pt-30 px-10 bg-blue-200 flex flex-col justify-center">
-      <h2 className="text-6xl font-bold mb-16 text-center tracking-wide">Technical Skills</h2>
+    <section className="min-h-screen py-20 px-10 bg-blue-200 flex flex-col justify-center">
+      <h2 className="text-6xl font-bold mb-16 text-center">Technical Skills</h2>
       
-      <div className="flex max-lg:flex-col gap-8 p-7">
+      <div className="max-w-5xl mx-auto w-full space-y-6">
         {skills.map((skillGroup, index) => (
           <SkillCard key={index} skillGroup={skillGroup} index={index} />
         ))}
@@ -51,19 +63,19 @@ const SkillCard = ({ skillGroup, index }) => {
     <div
       ref={ref}
       className={`transition-all duration-700 ${
-        show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
       }`}
-      style={{ transitionDelay: `${index * 150}ms` }}
+      style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="bg-white min-w-11/12 text-black border-2 border-black rounded-lg p-8 hover:shadow-2xl hover:scale-108 transition-all duration-500">
-        <h3 className="text-3xl font-bold mb-6 border-b-2 border-black pb-3">
+      <div className="bg-white border-2 border-black rounded-lg p-6 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+        <h3 className="text-2xl font-bold mb-4">
           {skillGroup.category}
         </h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-3">
           {skillGroup.items.map((skill, idx) => (
             <span
               key={idx}
-              className="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-purple-600 transition-colors"
+              className="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-purple-600 transition-colors duration-300"
             >
               {skill}
             </span>
