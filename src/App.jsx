@@ -6,6 +6,7 @@ import Projects from './Components/Projects'
 import Lenis from 'lenis'
 import Connect from './Components/Connect'
 import Preloader from './Components/Preloader'
+import TechnicalSkills from './Components/TechnicalSkills'
 
 const App = () => {
   const lenis = new Lenis({
@@ -18,6 +19,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <Projects/>
+      <TechnicalSkills/>
       <Connect/>
       <Footer/>
     </div>

@@ -4,9 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 const Project = () => {
   const projects = [
     {
-      title: 'Pokémon Data Analytics Pipeline',
-      description: 'Developed an end-to-end cloud data pipeline to ingest, process, and analyze Pokémon data using Airflow, Azure, Databricks, and Power BI. Implemented Medallion architecture for structured storage, automated workflows, and built interactive dashboards to explore attributes.',
-      githubLink: 'https://github.com/adwickakarsh/project-pikachu',
+      title: 'E-Commerce Platform',
+      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
+      githubLink: 'https://github.com/yourusername/ecommerce-platform',
+      websiteLink: 'https://ecommerce-demo.com',
     },
     {
       title: 'Task Management App',
@@ -16,8 +17,8 @@ const Project = () => {
     {
       title: 'Weather Dashboard',
       description: 'A weather forecasting dashboard that displays current weather and 7-day forecasts using OpenWeatherMap API. Built with React and features beautiful data visualizations.',
-      githubLink: 'https://github.com/adwickakarsh/Weather-App',
-      websiteLink: 'https://weather-dekho-adwick.vercel.app/',
+      githubLink: 'https://github.com/yourusername/weather-dashboard',
+      websiteLink: 'https://weather-demo.com',
     },
     {
       title: 'Social Media Clone',
@@ -27,10 +28,12 @@ const Project = () => {
   ];
 
   return (
-    <section className="min-h-screen py-20 px-10 bg-blue-200">
-      <h2 className="text-7xl font-bold mb-16 tracking-tight text-center">My Projects</h2>
+    <section className="min-h-screen p-10 bg-blue-200">
+      <h2 className=" bg-blue-200 z-50 text-6xl font-bold pb-20 text-center tracking-wide ">
+        My Projects
+      </h2>
       
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-4xl mx-auto space-y-4 pb-20">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />
         ))}
@@ -56,22 +59,22 @@ const ProjectCard = ({ project, index }) => {
   return (
     <div
       ref={ref}
-      className={`sticky transition-all duration-700 ${show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+      className={`sticky p-2 transition-all duration-700 ${show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
       style={{
-        top: `${80 + index * 20}px`,
+        top: `${140 + index * 40}px`,
         transitionDelay: `${index * 150}ms`,
       }}
     >
-      <div className="bg-white border-2 border-black rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all">
+      <div className="bg-white border-2 border-black rounded-lg p-8 hover:shadow-2xl hover:scale-110 transition-all duration-300">
         <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
         <p className="text-gray-700 mb-6 text-lg">{project.description}</p>
         
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4">
           <a
             href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 p-3 bg-black text-white rounded-lg hover:bg-purple-600 hover:scale-110 transition-all"
+            className="flex items-center gap-2 px-4 py-3 bg-black text-white rounded-lg hover:bg-purple-600 hover:scale-110 transition-all duration-500"
           >
             <ArrowUpRight size={20} />
             GitHub
@@ -82,7 +85,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.websiteLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 p-3 bg-black text-white rounded-lg hover:bg-blue-700 hover:scale-110 transition-all"
+              className="flex items-center gap-2 px-4 py-3 bg-black text-white rounded-lg hover:bg-blue-700 hover:scale-110 transition-all duration-500"
             >
               <ArrowUpRight size={20} />
               Website
