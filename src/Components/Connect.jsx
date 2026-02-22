@@ -7,7 +7,7 @@ const Connect = () => {
         <div className='text-4xl tracking-wide'>Let's work Together</div>
         <div className='flex gap-10 max-md:flex-col'>
           <button className='bg-black text-white p-4 transition-all duration-400 rounded-xl hover:scale-120 hover:bg-blue-600 max-lg:scale-90'>
-          <a href="/files/DataAnalystAdwick.pdf" download='ResumeAdwickAkarsh.pdf' target='_blank'>View Resume</a>
+          <a href="/DataAnalystAdwick.pdf" download='ResumeAdwickAkarsh.pdf' target='_blank'>View Resume</a>
         </button>
         <button className='bg-black text-white p-4 transition-all duration-400 rounded-xl hover:scale-120 hover:bg-blue-600 max-lg:scale-90'>
             <a href="mailto:adwick0704@gmail.com" target='_blank'>Write a Mail</a>
