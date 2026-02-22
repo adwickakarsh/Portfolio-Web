@@ -18,7 +18,7 @@ const Navbar = () => {
     <div>
       <button
         onClick={toggleMenu}
-        className="fixed top-7 right-13 z-100 flex flex-col gap-0.5 justify-center items-center w-15 h-15 rounded-full transition-all duration-800 ease-out hover:bg-blue-400 hover:scale-120"
+        className="fixed top-7 right-13 z-80 flex flex-col gap-0.5 justify-center items-center w-15 h-15 rounded-full transition-all duration-800 ease-out hover:bg-blue-400 hover:scale-120"
         aria-label="Toggle menu">
         <span className={`bg-black block transition-all duration-400 ease-out h-0.6 w-9 rounded-sm ${isOpen ? 'rotate-45 translate-y-2 h-1' : '-translate-y-0.5 h-0.5'}`}></span>
         <span className={`bg-black block transition-all duration-200 ease-out h-0.5 w-9 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
@@ -26,7 +26,7 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`fixed inset-0 bg-blue-300 z-80 transition-transform duration-900 ease-out-in ${
+        className={`fixed inset-0 bg-blue-300 z-70 transition-transform duration-900 ease-out-in ${
           isOpen ? 'translate-y-0' : '-translate-y-full'
         }`}>
         <div className="w-screen flex items-center justify-center h-screen text-black">
