@@ -10,7 +10,7 @@ const Project = () => {
     },
     {
       title: 'Weather Dekho',
-      description: 'A weather forecasting dashboard that displays current weather using OpenMeteo API. Built with React and features beautiful data visualizations.',
+      description: 'A clean, minimal weather dashboard built with React and Tailwind CSS, featuring real-time data from Open-Meteo, city autocomplete with keyboard navigation, and animated SVG weather icons.',
       githubLink: 'https://github.com/adwickakarsh/Weather-App',
       websiteLink: 'https://weather-dekho-adwick.vercel.app',
     },

@@ -45,7 +45,7 @@ const Navbar = () => {
       onClick={scrollToTop}>
         <CircleSlash2 size={35} />
       </div>
-      <div className='fixed h-22 w-screen backdrop-blur-[3px]'>
+      <div className='fixed h-22 w-screen backdrop-blur-[4px] z-69'>
       </div>
     </div>
   );
