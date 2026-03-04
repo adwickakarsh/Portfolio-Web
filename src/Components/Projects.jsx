@@ -4,6 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 const Project = () => {
   const projects = [
     {
+      title: 'Careers Wesbite',
+      description: 'A full-stack Applicant Tracking System engineered with React and Supabase. It features secure role-based dashboards, dynamic HR hiring pipelines, interview scheduling, and enterprise-grade PostgreSQL database management and document storage.',
+      githubLink: 'https://github.com/adwickakarsh/careers.samify',
+      websiteLink: 'https://careers-samify.vercel.app',
+    },
+    {
       title: 'Pokémon Data Analytics Pipeline',
       description: 'Built an end-to-end cloud data pipeline using Airflow, Azure, and Databricks to ingest, transform, and analyze Pokémon data, delivering interactive Power BI dashboards with real-time filtering and performance-optimized analytics.',
       githubLink: 'https://github.com/adwickakarsh/project-pikachu',
