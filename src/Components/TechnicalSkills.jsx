@@ -33,7 +33,7 @@ const TechnicalSkills = () => {
   ];
 
   return (
-    <section className="min-h-screen py-20 px-10 bg-blue-200 flex flex-col justify-center">
+    <section className="min-h-screen py-20 px-10 bg-purple-200 flex flex-col justify-center">
       <h2 className="text-6xl font-bold mb-16 text-center">Technical Skills</h2>
       
       <div className="max-w-5xl mx-auto w-full space-y-6">
@@ -75,7 +75,7 @@ const SkillCard = ({ skillGroup, index }) => {
           {skillGroup.items.map((skill, idx) => (
             <span
               key={idx}
-              className="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-purple-600 transition-colors duration-300"
+              className="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-yellow-600 hover:scale-110 transition-all duration-300"
             >
               {skill}
             </span>

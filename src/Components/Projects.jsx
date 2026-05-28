@@ -28,8 +28,8 @@ const Project = () => {
   ];
 
   return (
-    <section className="min-h-screen p-10 bg-blue-200">
-      <h2 className=" bg-blue-200 z-50 text-6xl font-bold pb-20 text-center tracking-wide ">
+    <section className="min-h-screen p-10 bg-purple-200">
+      <h2 className=" bg-purple-200 z-50 text-6xl font-bold pb-20 text-center tracking-wide ">
         My Projects
       </h2>
       
